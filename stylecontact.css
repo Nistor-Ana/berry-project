@@ -1,0 +1,106 @@
+/**
+*Summary
+*
+* CONTENT......Defines fonts, background-color, and layout for smaller screens.
+*
+*/
+
+
+/*.......................*\
+  #CONTENT
+\*.......................*/
+
+body {
+  background-image:         url(imagini/black.png);
+}
+
+.content{
+   font-family:             var(--font);
+   font-size:               20px;
+   color:                   white;
+   text-align:              left;
+   display:                 flex;
+   flex-direction:          row;
+   justify-content:         space-around;
+}
+.text {
+   padding:                 30px;
+   margin:                  30px;
+   text-align:              center;
+}
+.formular {
+  padding:                  30px;
+  margin:                   30px;
+  width:                    min(90vw, 600px);
+}
+input[type=text], textarea, select{
+    width:                  40%;
+    padding:                12px;
+    border:                 1px solid var(--maincolor);
+    border-radius:          5px;
+    margin-top:             6px;
+    margin-bottom:          16px;
+    resize:                 vertical;
+
+    background-color:       lightgrey;
+}
+input[type=submit]{
+    width:                  30%;
+    padding:                10px;
+    margin-top:             10px;
+    border:                 0px;
+    border-radius:          10px;
+
+    background-color:       #90EE90;
+    color:                  black;
+    box-shadow:             3px 3px 6px black;
+
+    font-size:              20px;
+    font-family:            var(--font);
+    font-weight:            500;
+
+  }
+input[type=submit]:hover{
+    width:                  30%;
+    padding:                10px;
+    margin-top:             10px;
+    border:                 0px;
+    border-radius:          10px;
+
+    background-color:       darkred;
+    color:                  black;
+    box-shadow:             3px 3px 6px black;
+
+    font-size:              20px;
+    font-family:            var(--font);
+    font-weight:            500;
+    cursor:                 pointer;
+    transition-duration:    0.3s;
+}
+@media (max-width:700px) {
+  .content {
+    display:                flex;
+    flex-direction:         column;
+    align-items:            center;
+    width:                  100%;
+    padding:                0;
+    margin:                 0;
+  }
+  .text {
+    width:                  100vw;
+    padding:                10px;
+    margin:                 0;
+    align-self:             right;
+    font-size:              13px;
+  }
+  .formular {
+    padding:                10px;
+    margin:                 0;
+    align-self:             center;
+    font-size:              13px;
+  }
+  input[type=text],input[type=submit],input[type=submit]:hover,
+   textarea, select {
+                            width: 80%;
+   }
+  }

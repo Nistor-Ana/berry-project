@@ -1,0 +1,151 @@
+
+/** This .css file is a base file for every page on this site, definig the
+* layout of the pages and the style of the header and footer.*/
+
+/**
+*Contents
+*
+* GENERAL RULES.....Page layout, font
+*
+*NAVIGATION.....Logo image, navigation bar style
+*
+*FOOTER.....Position and style
+*
+*/
+
+
+
+/*.......................*\
+  #GENERAL RULES
+\*.......................*/
+
+
+:root {
+  --maincolor:          rgb(47, 79, 79);
+  --lightgreen:         #90EE90;
+  --font:               'Kaisei HarunoUmi', serif;
+}
+
+body {
+  height:               100vh;
+
+  display:              grid;
+  grid-template-areas:
+                         "header"
+                         "main"
+                         "footer";
+  grid-template-rows:    auto 1fr auto;
+  grid-template-columns: 1fr;
+  grid-column-gap:       15px;
+
+
+  font-family:           var(--font);
+  color:                 white;
+
+  background-repeat:     no-repeat;
+  background-attachment: fixed;
+  background-position:   center;
+  background-size:       cover;
+
+  margin:                0;
+  padding:               0;
+}
+
+
+
+
+
+/*.......................*\
+  #NAVIGATION
+\*.......................*/
+
+
+.header{
+  grid-area:              header;
+  display:                flex;
+  align-items:            center;
+
+  height:                 100%;
+  font-family:            var(--font);
+  color:                  white;
+}
+.logo {
+  width:                  80px;
+  height:                 80px;
+  margin-left:            20px;
+  animation:              logo 2s;
+}
+@keyframes logo {
+  0% {width: 50px; height: 50px;}
+  100% {width: 80px; height: 80px;}
+}
+
+.navbar {
+  display:                flex;
+}
+.navbar__item {
+    padding:              20px;
+    list-style-type:      none;
+}
+.navbar--link {
+  text-decoration:        none;
+  font-size:              18px;
+  font-family:            var(--font);
+  color:                  white;
+  background-color:       #2F4F4F;
+  border-radius:          10px;
+
+  margin:                 5px;
+  padding:                7px;
+  border-radius:          5px;
+  animation:              navbar 3s;
+}
+@keyframes navbar {
+  0% {background-color: var(--lightgreen);}
+  100% {background-color: var(--maincolor);}
+}
+.navbar--link:hover {
+  background-color:       #90EE90;
+  color:                  black;
+  border-radius:          5px;
+  font-weight:            bold;
+  transition:             background-color 1.5s;
+}
+@media (max-width:500px) {
+  .header {
+    display:              flex;
+    flex-direction:       column;
+    justify-content:      center;
+    padding-top:          10px;
+  }
+  .navbar {
+    display:              flex;
+    flex-direction:       row;
+    flex-flow:            wrap;
+    width:                100vw;
+  }
+  .navbar--link {
+    font-size:            15px;
+    margin:               auto;
+  }
+}
+
+
+
+
+
+/*.......................*\
+  #FOOTER
+\*.......................*/
+
+
+.footer{
+  background-color:      black;
+  color:                 grey;
+  font-size:             11px;
+  text-align:            center;
+  line-height:           1.5;
+
+  padding:               5px;
+  height:                100%;
+}

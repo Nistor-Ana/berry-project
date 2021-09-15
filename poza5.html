@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dark Arts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylebase.css">
+    <link rel="stylesheet" href="stylepictures.css">
+  </head>
+
+
+  
+  <body>
+    <div class="header">
+        <img class="logo" src="imagini/logogreen.png" alt="Logo">
+        <ul class="navbar">
+          <li class="navbar__item"><a class="navbar--link" href="index.html">Home</a></li>
+          <li class="navbar__item"><a class="navbar--link" href="artworks.html">Artworks</a></li>
+          <li class="navbar__item"><a class="navbar--link" href="history.html">History</a></li>
+          <li class="navbar__item"><a class="navbar--link" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+
+
+
+    <div class="content">
+      <div class="poza">
+        <img src="imagini/painting5.png" alt="Painting">
+      </div>
+
+      <div class="description">
+        <h3>Painting title</h3>
+        <h2>Price: $$$</h2>
+        <p>Acrylic on canvas</p>
+        <p>Author: </p>
+        <button onclick="myFunction()" type="button" name="button">View contact information</button>
+        <p id="demo"></p>
+      </div>
+    </div>
+
+
+
+
+    <div class="footer">
+      <p>Our contact information</p>
+      <p>E-mail address is:</p>
+      <p>Visit our social media: </p>
+    </div>
+
+    <script>
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Name of author. Phone number: 08658794589";
+    }
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,53 @@
+/**
+*Summary
+*
+* CONTENT......Defines fonts, background-color, and layout for smaller screens.
+*
+*/
+
+
+/*.......................*\
+  #CONTENT
+\*.......................*/
+
+body {
+  background-image:              url(imagini/black.png);
+}
+
+.content{
+  font-family:                   var(--font);
+  font-size:                     20px;
+  color:                         white;
+  text-align:                    center;
+
+  padding:                       40px;
+  margin:                        10px;
+
+  display:                       flex;
+  flex-direction:                column;
+
+}
+.introducere {
+  font-family:                   var(--font);
+  font-size:                     20px;
+  color:                         white;
+  text-align:                    center;
+  padding:                       40px;
+}
+.content img {
+  width:                         min(85vw, 700px);
+  margin:                        20px;
+  border:                        2px solid black;
+  filter:                        drop-shadow(10px 10px 10px black);
+}
+@media (max-width:500px) {
+  .content {
+    font-size:                   18px;
+    padding:                     10px;
+  }
+  .introducere {
+    font-size:                   18px;
+    padding:                     10px;
+  }
+
+}
